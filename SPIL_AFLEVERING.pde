@@ -91,16 +91,15 @@ class Game
     checkForFoodCollisionsP2();
     clearBoard();
     populateBoard();
+    
     if (gameOverP2 != false) {
-      clearBoard();
-      stroke(255);
-      text("GAME OVER: SPILLER 1 VANDT", height/2, width/2);
+        board[player2.getX()][player2.getY()] = 0;
+        println("Player 1 won!");
       noLoop();
     }
     if (gameOverP1 != false) {
-      clearBoard();
-      stroke(255);
-      text("GAME OVER: SPILLER 2 VANDT", height/2,width/2);
+     board[player.getX()][player.getY()] = 0;
+      println("Player 2 won!");
       noLoop();
     }
   }
